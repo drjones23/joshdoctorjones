@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Josh 'Doctor' Jones</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f2ecdf;
+      color: #333;
+    }
+    header {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('hero-image.jpg') center center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3em;
+      color: white;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px #000;
+    }
+    header p {
+      font-size: 1.2em;
+      color: white;
+      margin-top: 0.5em;
+    }
+    nav {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #888;
+      font-size: 0.9em;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: goldenrod;
+    }
+    .projects, .contact, .videos {
+      padding: 4em 2em;
+      text-align: center;
+    }
+    .projects h2, .contact h2, .videos h2 {
+      color: goldenrod;
+      letter-spacing: 1px;
+    }
+    .audio-player {
+      margin-top: 2em;
+      background: #f2ecdf;
+      padding: 1em;
+      border-radius: 12px;
+      display: inline-block;
+    }
+    .footer {
+      text-align: center;
+      padding: 2em;
+      font-size: 0.8em;
+      color: #aaa;
+    }
+    .socials {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .socials a {
+      color: #333;
+      font-size: 1.2em;
+      text-decoration: none;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+    input, textarea {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background: goldenrod;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #b89400;
+    }
+    iframe {
+      width: 100%;
+      max-width: 560px;
+      height: 315px;
+      margin-top: 2em;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+      nav {
+        top: 10px;
+        right: 10px;
+      }
+      .socials {
+        right: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#music">MUSIC</a>
+      <a href="#videos">VIDEOS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+    <h1>JOSH 'DOCTOR' JONES</h1>
+    <p>Live Performer · Studio Musician · Composer</p>
+  </header>
+
+  <section class="projects" id="music">
+    <h2>RECENT PROJECTS</h2>
+    <p>The Doctor Jones Quartet</p>
+    <div class="audio-player">
+      <p><strong>Josh 'Doctor' Jones</strong></p>
+      <p>The Chicken (Demo)</p>
+      <audio controls>
+        <source src="demo-track.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </section>
+
+  <section class="videos" id="videos">
+    <h2>FEATURED VIDEOS</h2>
+    <iframe src="https://www.youtube.com/embed/YOUTUBE_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>CONTACT ME</h2>
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <div class="socials">
+    <a href="#">🔗</a>
+    <a href="#">🐦</a>
+    <a href="#">📸</a>
+    <a href="#">📺</a>
+  </div>
+
+  <footer class="footer">
+    &copy; 2025 Josh 'Doctor' Jones. All rights reserved.
+  </footer>
+</body>
+</html>
