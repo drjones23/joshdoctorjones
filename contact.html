@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Josh 'Doctor' Jones</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f2ecdf;
+      color: #333;
+    }
+    header {
+      padding: 4em 2em 2em;
+      text-align: center;
+      background: url('Josh - Sax.jpg') center center/cover no-repeat;
+      color: white;
+      text-shadow: 0 0 10px #000;
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.2em;
+    }
+    header p {
+      font-size: 1.1em;
+    }
+    .contact {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    .contact h2 {
+      color: goldenrod;
+      font-size: 1.5em;
+      margin-bottom: 0.5em;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+    .contact input,
+    .contact textarea {
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .contact button {
+      background: goldenrod;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .contact button:hover {
+      background: #b89400;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin: 2em 0;
+    }
+    .back-link a {
+      text-decoration: none;
+      color: goldenrod;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Josh</h1>
+    <p>I'd love to hear from you</p>
+  </header>
+
+  <section class="contact">
+    <h2>Get in Touch</h2>
+    <form name="contact" method="POST" data-netlify="true">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <div class="back-link">
+    <a href="index.html">&larr; Back to Home</a>
+  </div>
+</body>
+</html>
